@@ -279,6 +279,7 @@ main,
 .hero-orbit article,
 .omen-strip article,
 .next-ritual,
+.action-board article,
 .ritual-path article,
 .velocity-card,
 .admin-card,
@@ -343,7 +344,7 @@ main,
 }
 
 main {
-  padding-top: 26px;
+  padding-top: 86px;
 }
 
 .omen-strip {
@@ -375,6 +376,74 @@ main {
 
 .section-kicker {
   margin-bottom: 34px;
+}
+
+.action-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.action-board article {
+  position: relative;
+  overflow: hidden;
+  min-height: 248px;
+  padding: 18px;
+}
+
+.action-board article::after {
+  content: "";
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(217, 184, 108, 0.25);
+  border-radius: 50%;
+  background:
+    linear-gradient(90deg, transparent 47%, rgba(217, 184, 108, 0.65) 48% 52%, transparent 53%),
+    linear-gradient(0deg, transparent 47%, rgba(217, 184, 108, 0.65) 48% 52%, transparent 53%);
+  opacity: 0.86;
+}
+
+.action-board span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 54px;
+  height: 30px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(217, 184, 108, 0.42);
+  border-radius: 999px;
+  color: var(--gold);
+  background: rgba(217, 184, 108, 0.1);
+  font-size: 0.72rem;
+  font-weight: 950;
+  text-transform: uppercase;
+}
+
+.action-board strong,
+.action-board small {
+  display: block;
+}
+
+.action-board strong {
+  max-width: 18ch;
+  margin-bottom: 12px;
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.action-board a {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .ritual-glyph {
@@ -966,7 +1035,8 @@ main {
 
 @media (max-width: 1080px) {
   .omen-strip,
-  .culture-panel {
+  .culture-panel,
+  .action-board {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1092,7 +1162,8 @@ main {
   .ritual-path,
   .checklist-grid,
   .resource-grid,
-  .culture-panel {
+  .culture-panel,
+  .action-board {
     grid-template-columns: 1fr;
   }
 

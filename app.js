@@ -2,74 +2,50 @@ const checklistItems = [
   {
     id: "temporary-base",
     category: "housing",
-    title: "Choose temporary accommodation window",
-    detail: "Book a 3-4 week base with a tested commute to Grand Canal Dock."
-  },
-  {
-    id: "proof-address",
-    category: "setup",
-    title: "Collect proof of address",
-    detail: "Keep files ready for bank, PPS number, and other admin checks."
-  },
-  {
-    id: "photo-id",
-    category: "setup",
-    title: "Keep photo ID scans handy",
-    detail: "Dublin.ie notes PPS applications usually need photo ID."
-  },
-  {
-    id: "pps-evidence",
-    category: "setup",
-    title: "Prepare PPS reason evidence",
-    detail: "Apply online after arrival when there is a clear reason for needing one."
-  },
-  {
-    id: "leap-card",
-    category: "setup",
-    title: "Get Leap Card sorted",
-    detail: "Use it across Dublin Bus, Luas, DART, and Dublin-area commuter rail."
+    title: "Book a 3-4 week landing base",
+    detail: "Only shortlist places with a tested Barrow Street commute."
   },
   {
     id: "commute-test",
-    category: "setup",
-    title: "Test the Barrow Street commute",
-    detail: "Run it at real work arrival time and save two backup routes."
+    category: "housing",
+    title: "Test commute at real arrival time",
+    detail: "Save one wet-weather backup and one late-return route."
+  },
+  {
+    id: "phone-data",
+    category: "admin",
+    title: "Activate phone and data",
+    detail: "Do this before bank, housing viewings, and app-based travel."
+  },
+  {
+    id: "leap-card",
+    category: "admin",
+    title: "Get Leap sorted",
+    detail: "Use it across Dublin Bus, Luas, DART, and commuter rail."
+  },
+  {
+    id: "proof-pack",
+    category: "admin",
+    title: "Build bank/PPS proof pack",
+    detail: "Address proof, photo ID, and reason evidence in one folder."
+  },
+  {
+    id: "weekly-room",
+    category: "social",
+    title: "Choose one weekly room",
+    detail: "Meetup, InterNations, work group, or class with repeat faces."
+  },
+  {
+    id: "contact-plan",
+    category: "social",
+    title: "Schedule 18 contact points",
+    detail: "Three recurring touchpoints per week for six weeks."
   },
   {
     id: "football-slot",
     category: "football",
-    title: "Book first 5-a-side or GoodRec game",
-    detail: "Start casual before searching for club trials or Sunday league."
-  },
-  {
-    id: "google-football",
-    category: "football",
-    title: "Ask Google internal groups",
-    detail: "Internal groups can be the fastest path to regular games."
-  },
-  {
-    id: "meetup-event",
-    category: "social",
-    title: "Pick one recurring Meetup",
-    detail: "Favor groups that meet weekly so repeat contact is natural."
-  },
-  {
-    id: "internations",
-    category: "social",
-    title: "Check InterNations or expat groups",
-    detail: "Useful for fellow nationals and people in the same arrival phase."
-  },
-  {
-    id: "six-week-plan",
-    category: "social",
-    title: "Plan 18 contact points",
-    detail: "Three recurring touchpoints per week for six weeks, targeting five repeat contacts."
-  },
-  {
-    id: "sea-walk",
-    category: "social",
-    title: "Schedule one low-pressure sea walk",
-    detail: "Sandymount or the coast makes Dublin weather easier to enjoy."
+    title: "Book first casual 5-a-side",
+    detail: "GoodRec, Meetup, or a Google group before club trials."
   }
 ];
 
@@ -130,10 +106,10 @@ function renderChecklist() {
 
 function detailText(item) {
   const categoryNames = {
-    setup: "Setup",
-    social: "Social",
+    admin: "Admin",
     football: "Football",
-    housing: "Housing"
+    housing: "Housing",
+    social: "Social"
   };
 
   return `${categoryNames[item.category]}: ${item.detail}`;
