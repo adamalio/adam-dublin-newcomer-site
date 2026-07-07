@@ -6,12 +6,13 @@
     <title>Dublin Landing Kit for Adam</title>
     <meta
       name="description"
-      content="A practical newcomer command center for Adam's Hamburg to Dublin relocation for Google."
+      content="A visual newcomer command center for Adam's Hamburg to Dublin relocation for Google."
     >
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23098b63'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial,sans-serif' font-size='34' font-weight='700' fill='white'%3ED%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-hero" id="top">
+    <header class="hero" id="top">
       <nav class="nav" aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Dublin Landing Kit home">
           <span class="brand-mark">D</span>
@@ -21,120 +22,141 @@
           <a href="#week-one">7 days</a>
           <a href="#social">Social</a>
           <a href="#football">Football</a>
-          <a href="#resources">Links</a>
+          <a href="#neighborhoods">Areas</a>
+          <a href="#resources">Sources</a>
         </div>
       </nav>
 
-      <section class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Hamburg to Dublin, built for week one</p>
+      <section class="hero-stage" aria-label="Dublin Landing Kit overview">
+        <img
+          class="hero-image"
+          src="dublin-landing-hero.png"
+          alt="Illustrated Dublin docklands arrival scene with transport, social, and football cues"
+        >
+        <div class="hero-overlay">
+          <p class="eyebrow">Hamburg to Dublin, week-one ready</p>
           <h1>Dublin Landing Kit</h1>
           <p class="lede">
-            A one-page command center for Adam: set up the basics, find repeat social contact,
-            get football moving, and learn the Dublin shortcuts that matter near Google.
+            A visual command center for Adam: where to land, what to set up, how to meet people,
+            and how to get football moving near Grand Canal Dock.
           </p>
           <div class="hero-actions" aria-label="Quick links">
             <a class="button primary" href="#next-step">Next best step</a>
-            <a class="button ghost" href="#checklist">Open checklist</a>
+            <a class="button ghost" href="#checklist">Checklist</a>
           </div>
         </div>
-
-        <aside class="glass-card hero-card" aria-label="Priority plan">
-          <figure class="city-visual" aria-label="Stylized Dublin commute map">
-            <div class="bay"></div>
-            <div class="river-line"></div>
-            <div class="route route-dart"></div>
-            <div class="route route-luas"></div>
-            <span class="map-pin pin-google">Google</span>
-            <span class="map-pin pin-center">City</span>
-            <span class="map-pin pin-sea">Sea</span>
-          </figure>
-          <p class="card-kicker">Priority order</p>
-          <ol class="priority-list">
-            <li><span>1</span>Base near a reliable commute.</li>
-            <li><span>2</span>Get Leap Card, SIM, bank, and PPS route ready.</li>
-            <li><span>3</span>Book one football slot and one social event.</li>
-          </ol>
-        </aside>
+        <div class="hero-stack" aria-label="Top priorities">
+          <article class="hero-tile">
+            <span>01</span>
+            <strong>Base</strong>
+            <small>3-4 week landing stay near a reliable Barrow Street route.</small>
+          </article>
+          <article class="hero-tile">
+            <span>02</span>
+            <strong>Admin</strong>
+            <small>SIM, bank path, Leap Card, proof of address, PPS docs.</small>
+          </article>
+          <article class="hero-tile">
+            <span>03</span>
+            <strong>People</strong>
+            <small>Book one football slot and one repeat social event.</small>
+          </article>
+        </div>
       </section>
     </header>
 
     <main>
-      <section class="stats-band" aria-label="Quick Dublin facts">
-        <article>
-          <strong>Capital city</strong>
-          <span>Dublin is Ireland's capital and largest city.</span>
+      <section class="fact-strip" aria-label="Quick Dublin facts">
+        <article class="fact-card">
+          <span class="fact-icon">CAP</span>
+          <strong>Capital + largest city</strong>
+          <small>Dublin is Ireland's capital and largest city.</small>
         </article>
-        <article>
-          <strong>Google base</strong>
-          <span>Google Dublin is centered around Grand Canal Dock and Barrow Street.</span>
+        <article class="fact-card">
+          <span class="fact-icon">GCD</span>
+          <strong>Google docklands base</strong>
+          <small>Google Dublin centers around Grand Canal Dock / Barrow Street.</small>
         </article>
-        <article>
-          <strong>Transit card</strong>
-          <span>Leap Card works on Dublin Bus, Luas, DART, and commuter rail in the Dublin area.</span>
+        <article class="fact-card">
+          <span class="fact-icon">LEAP</span>
+          <strong>One transit card</strong>
+          <small>Leap works on Dublin Bus, Luas, DART, and Dublin-area commuter rail.</small>
         </article>
-        <article>
-          <strong>Fare edge</strong>
-          <span>Leap fares can be up to 31% cheaper than single tickets. Source: Dublin.ie getting around.</span>
+        <article class="fact-card">
+          <span class="fact-icon">31%</span>
+          <strong>Fare advantage</strong>
+          <small>Leap fares can be up to 31% cheaper than single tickets. Source: Dublin.ie getting around.</small>
         </article>
       </section>
 
-      <section class="section intro-strip" id="next-step">
+      <section class="next-panel" id="next-step">
         <div>
           <p class="eyebrow">Next best step</p>
-          <h2>Choose the temporary accommodation window, then book one football or social event.</h2>
+          <h2>Lock the landing base, then put one repeat event on the calendar.</h2>
         </div>
-        <div class="next-card glass-card">
-          <span class="pill">Today</span>
-          <p>
-            Pick a 3-4 week landing base with a simple commute to Grand Canal Dock. Then reserve
-            the first GoodRec, 5-a-side, Meetup, or Google internal group slot before arrival week.
-          </p>
+        <div class="next-flow" aria-label="Next step flow">
+          <span>Temporary stay</span>
+          <i></i>
+          <span>Commute test</span>
+          <i></i>
+          <span>Football or Meetup</span>
         </div>
       </section>
 
-      <section class="section split" id="week-one">
-        <div class="section-heading">
+      <section class="section visual-grid" id="week-one">
+        <div class="section-head">
           <p class="eyebrow">First 7 days</p>
-          <h2>Stabilize the basics before optimizing anything.</h2>
-          <p>
-            Keep the first week narrow: sleep, phone, money, transport, commute rehearsal,
-            and one human thing on the calendar.
-          </p>
+          <h2>Settle the systems before optimizing the city.</h2>
         </div>
-        <div class="timeline">
-          <article class="glass-card step-card">
-            <span class="day">Day 1</span>
-            <h3>Sleep base</h3>
-            <p>Confirm a temporary base with laundry, workspace, and direct transport to Barrow Street.</p>
+        <div class="week-board" aria-label="First week plan">
+          <article>
+            <span>Day 1</span>
+            <strong>Sleep base</strong>
+            <small>Laundry, workspace, direct route to Barrow Street.</small>
           </article>
-          <article class="glass-card step-card">
-            <span class="day">Day 2</span>
-            <h3>SIM and bank</h3>
-            <p>Sort mobile data and start the bank setup path. Keep proof of address visible and backed up.</p>
+          <article>
+            <span>Day 2</span>
+            <strong>SIM + bank</strong>
+            <small>Start phone/data and bank setup with address files ready.</small>
           </article>
-          <article class="glass-card step-card">
-            <span class="day">Day 3</span>
-            <h3>Leap Card</h3>
-            <p>Get Leap set up for Dublin Bus, Luas, DART, and commuter rail across the Dublin area.</p>
+          <article>
+            <span>Day 3</span>
+            <strong>Leap Card</strong>
+            <small>Bus, Luas, DART, commuter rail coverage.</small>
           </article>
-          <article class="glass-card step-card">
-            <span class="day">Day 4</span>
-            <h3>Work commute</h3>
-            <p>Test the commute at work arrival time, not at a quiet hour. Save two backup routes.</p>
+          <article>
+            <span>Day 4</span>
+            <strong>Commute drill</strong>
+            <small>Test at real arrival time and save two backups.</small>
           </article>
-          <article class="glass-card step-card">
-            <span class="day">Day 5-7</span>
-            <h3>First social event</h3>
-            <p>Attend one recurring event where the same people are likely to show up again next week.</p>
+          <article class="wide">
+            <span>Days 5-7</span>
+            <strong>First repeat room</strong>
+            <small>Choose a social or football event likely to have the same people next week.</small>
           </article>
         </div>
+        <aside class="map-card" aria-label="Commute map diagram">
+          <div class="mini-map">
+            <span class="water"></span>
+            <span class="river"></span>
+            <span class="line dart">DART</span>
+            <span class="line luas">Luas</span>
+            <span class="pin city">City Centre</span>
+            <span class="pin google">Google / Barrow St</span>
+            <span class="pin sea">Sea walks</span>
+          </div>
+          <div class="map-legend">
+            <span><b class="green"></b>DART / coast</span>
+            <span><b class="red"></b>Luas / inner south</span>
+            <span><b class="blue"></b>Docklands target</span>
+          </div>
+        </aside>
       </section>
 
       <section class="section dashboard" id="checklist">
-        <div class="section-heading">
+        <div class="section-head compact">
           <p class="eyebrow">Interactive checklist</p>
-          <h2>Track the setup items that unlock the rest.</h2>
+          <h2>Track only the setup items that unlock movement.</h2>
         </div>
         <div class="toolbar" aria-label="Checklist filters">
           <button class="filter-button active" type="button" data-filter="all">All</button>
@@ -146,121 +168,135 @@
         <div class="checklist-grid" id="checklistItems" aria-live="polite"></div>
       </section>
 
-      <section class="section split" id="social">
-        <div class="section-heading">
+      <section class="section social-grid" id="social">
+        <div class="section-head">
           <p class="eyebrow">Social landing</p>
-          <h2>Use repetition, not random one-offs.</h2>
-          <p>
-            For six weeks, aim for three recurring social touchpoints per week. That creates
-            18 contact points and a realistic target of five repeat contacts.
-          </p>
+          <h2>Repeat contact beats random volume.</h2>
         </div>
-        <div class="metric-row">
-          <article class="glass-card metric"><strong>3</strong><span>touchpoints per week</span></article>
-          <article class="glass-card metric"><strong>6</strong><span>weeks of repeats</span></article>
-          <article class="glass-card metric"><strong>18</strong><span>contact points</span></article>
-          <article class="glass-card metric"><strong>5</strong><span>repeat contacts target</span></article>
+        <div class="flywheel" aria-label="Social flywheel">
+          <div class="flywheel-core">
+            <strong>5</strong>
+            <span>repeat contacts</span>
+          </div>
+          <article class="node n1"><strong>Meetup</strong><small>Recurring groups</small></article>
+          <article class="node n2"><strong>InterNations</strong><small>New arrivals</small></article>
+          <article class="node n3"><strong>Football</strong><small>Weekly games</small></article>
+          <article class="node n4"><strong>Work</strong><small>Google groups</small></article>
+        </div>
+        <div class="contact-chart" aria-label="Six week contact chart">
+          <div class="chart-stat"><strong>3 x 6 = 18</strong><span>planned contact points</span></div>
+          <div class="bars">
+            <span style="--h: 34%"><b>W1</b></span>
+            <span style="--h: 48%"><b>W2</b></span>
+            <span style="--h: 62%"><b>W3</b></span>
+            <span style="--h: 76%"><b>W4</b></span>
+            <span style="--h: 88%"><b>W5</b></span>
+            <span style="--h: 100%"><b>W6</b></span>
+          </div>
+        </div>
+        <div class="community-cloud" aria-label="Community ideas">
+          <span>Meetup Dublin</span>
+          <span>New in Dublin</span>
+          <span>InterNations</span>
+          <span>German / expat groups</span>
+          <span>Tech</span>
+          <span>Product</span>
+          <span>AI</span>
+          <span>Running</span>
+          <span>Climbing</span>
+          <span>Gym classes</span>
         </div>
       </section>
 
-      <section class="section two-column" id="football">
-        <article class="glass-card feature-card">
+      <section class="section football-grid" id="football">
+        <div class="section-head">
           <p class="eyebrow">Football path</p>
-          <h2>Start casual, then move toward clubs.</h2>
-          <p>
-            Week one should be low-friction: casual 5-a-side, GoodRec, Meetup, and Google internal
-            groups. Once rhythm and location are clearer, look for club trials or Sunday league.
-          </p>
-          <ol class="compact-list">
-            <li>Book a casual 5-a-side slot.</li>
-            <li>Ask Google Dublin groups for regular games.</li>
-            <li>Use repeat games to find a stable team.</li>
-            <li>Progress to club trials or Sunday league once settled.</li>
-          </ol>
-        </article>
-        <article class="glass-card feature-card">
-          <p class="eyebrow">Communities and groups</p>
-          <h2>Stack familiar and local circles.</h2>
-          <div class="tag-cloud" aria-label="Community ideas">
-            <span>Meetup Dublin</span>
-            <span>New in Dublin</span>
-            <span>InterNations</span>
-            <span>German expat groups</span>
-            <span>Tech meetups</span>
-            <span>Product events</span>
-            <span>AI meetups</span>
-            <span>Running groups</span>
-            <span>Climbing gyms</span>
-            <span>Gym classes</span>
+          <h2>Climb from low-friction games to a stable team.</h2>
+        </div>
+        <div class="ladder" aria-label="Football ladder">
+          <article>
+            <span>1</span>
+            <strong>Casual 5-a-side</strong>
+            <small>Meetup or GoodRec; easiest first touch.</small>
+          </article>
+          <article>
+            <span>2</span>
+            <strong>Google groups</strong>
+            <small>Ask for internal regular games near office rhythm.</small>
+          </article>
+          <article>
+            <span>3</span>
+            <strong>Repeat squad</strong>
+            <small>Use familiar players to find a weekly slot.</small>
+          </article>
+          <article>
+            <span>4</span>
+            <strong>Club trials</strong>
+            <small>Move to Sunday league once housing and commute settle.</small>
+          </article>
+        </div>
+        <div class="admin-card">
+          <p class="eyebrow">PPS number path</p>
+          <strong>Apply online after arrival</strong>
+          <div class="doc-row">
+            <span>Proof of address</span>
+            <span>Photo ID</span>
+            <span>Reason evidence</span>
           </div>
-        </article>
+          <small>Dublin.ie says new arrivals usually need these documents when applying for a PPS number.</small>
+        </div>
       </section>
 
       <section class="section" id="neighborhoods">
-        <div class="section-heading wide">
-          <p class="eyebrow">Neighborhood shortlist</p>
-          <h2>Look near Grand Canal Dock first, then widen by commute quality.</h2>
+        <div class="section-head wide">
+          <p class="eyebrow">Neighborhood matrix</p>
+          <h2>Start close to Grand Canal Dock, then widen by route quality.</h2>
         </div>
-        <div class="neighborhood-grid">
-          <article class="glass-card area-card">
-            <h3>Grand Canal Dock</h3>
-            <p>Closest to Google and easiest for office days. Expect high demand and premium pricing.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Ringsend</h3>
-            <p>Very close to Barrow Street with a practical walk or short cycle into the office.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Sandymount</h3>
-            <p>Quieter coastal feel with DART access and strong sea-walk upside.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Ballsbridge</h3>
-            <p>Polished, convenient, and close enough for a straightforward bus, cycle, or walk.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Ranelagh</h3>
-            <p>Luas-friendly, social, and popular. Commute is manageable with a route check.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Rathmines</h3>
-            <p>Good food, gyms, and buses. Better value than the docklands if the commute works.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Portobello</h3>
-            <p>Central, canal-side, and social. Cycle or bus can be efficient to Grand Canal Dock.</p>
-          </article>
-          <article class="glass-card area-card">
-            <h3>Dublin 6 / 8</h3>
-            <p>Broader search zone with lively options. Prioritize direct routes over map distance.</p>
-          </article>
+        <div class="area-matrix" role="table" aria-label="Neighborhood comparison">
+          <div class="matrix-row header" role="row">
+            <span role="columnheader">Area</span>
+            <span role="columnheader">Best for</span>
+            <span role="columnheader">Commute note</span>
+            <span role="columnheader">Watch</span>
+          </div>
+          <div class="matrix-row" role="row"><strong>Grand Canal Dock</strong><span>Closest base</span><span>Walkable to Google</span><span>Premium demand</span></div>
+          <div class="matrix-row" role="row"><strong>Ringsend</strong><span>Practical landing</span><span>Short walk/cycle</span><span>Limited supply</span></div>
+          <div class="matrix-row" role="row"><strong>Sandymount</strong><span>Sea walks</span><span>DART / cycle options</span><span>Quieter nights</span></div>
+          <div class="matrix-row" role="row"><strong>Ballsbridge</strong><span>Polished convenience</span><span>Bus, cycle, walk checks</span><span>Price</span></div>
+          <div class="matrix-row" role="row"><strong>Ranelagh</strong><span>Social southside</span><span>Luas-friendly</span><span>Route transfer</span></div>
+          <div class="matrix-row" role="row"><strong>Rathmines</strong><span>Food, gyms, value</span><span>Bus/cycle dependent</span><span>Peak traffic</span></div>
+          <div class="matrix-row" role="row"><strong>Portobello</strong><span>Canal + central</span><span>Cycle or bus works</span><span>Busy market</span></div>
+          <div class="matrix-row" role="row"><strong>Dublin 6 / 8</strong><span>Broader search</span><span>Prioritize direct routes</span><span>Distance illusion</span></div>
         </div>
       </section>
 
-      <section class="section two-column">
-        <article class="glass-card feature-card">
-          <p class="eyebrow">Practical admin</p>
-          <h2>PPS number path</h2>
-          <p>
-            Dublin.ie says new arrivals can apply for a PPS number online after arrival and usually
-            need proof of address, photo ID, and evidence of why they need one.
-          </p>
-        </article>
-        <article class="glass-card feature-card">
-          <p class="eyebrow">Fun facts and culture</p>
-          <ul class="culture-list">
-            <li>Pubs often work as social spaces, not just places to drink.</li>
-            <li>GAA is culturally huge, even if football is Adam's entry point.</li>
-            <li>Weather changes quickly; sea walks help make that a feature.</li>
-            <li>Dublin is compact, but housing is competitive.</li>
-          </ul>
-        </article>
+      <section class="section culture-panel">
+        <div class="culture-card">
+          <span>Pubs</span>
+          <strong>Social rooms</strong>
+          <small>Often community spaces, not just places to drink.</small>
+        </div>
+        <div class="culture-card">
+          <span>GAA</span>
+          <strong>Cultural gravity</strong>
+          <small>Worth understanding even if football is the entry point.</small>
+        </div>
+        <div class="culture-card">
+          <span>Coast</span>
+          <strong>Weather reset</strong>
+          <small>Sea walks make fast-changing weather easier to enjoy.</small>
+        </div>
+        <div class="culture-card">
+          <span>Housing</span>
+          <strong>Competitive</strong>
+          <small>Dublin is compact, but the rental market moves fast.</small>
+        </div>
       </section>
 
       <section class="section resources" id="resources">
-        <div class="section-heading wide">
+        <div class="section-head wide">
           <p class="eyebrow">Links and source labels</p>
-          <h2>Keep these open while making decisions.</h2>
+          <h2>Source cards for decisions.</h2>
         </div>
         <div class="resource-grid">
           <a class="resource-link" href="https://dublin.ie/live/relocating-to-dublin/" target="_blank" rel="noreferrer">
