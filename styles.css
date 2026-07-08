@@ -281,6 +281,8 @@ main,
 .omen-strip article,
 .next-ritual,
 .action-board article,
+.difference-grid,
+.video-card,
 .ritual-path article,
 .velocity-card,
 .admin-card,
@@ -328,6 +330,8 @@ main,
 .omen-strip small,
 .ritual-path strong,
 .ritual-path small,
+.video-card span,
+.video-card small,
 .resource-link span,
 .resource-link small {
   display: block;
@@ -925,6 +929,13 @@ main {
   margin-top: -24px;
 }
 
+.field-manual {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
 .admin-card strong {
   display: block;
   max-width: 12ch;
@@ -949,6 +960,80 @@ main {
   background: rgba(217, 184, 108, 0.1);
   font-size: 0.82rem;
   font-weight: 900;
+}
+
+.difference-grid {
+  overflow: hidden;
+  background: rgba(248, 241, 220, 0.045);
+}
+
+.difference-row {
+  display: grid;
+  grid-template-columns: 0.76fr 1fr 1.44fr;
+  gap: 1px;
+  background: rgba(217, 184, 108, 0.13);
+}
+
+.difference-row > * {
+  min-height: 64px;
+  padding: 14px;
+  background: rgba(2, 6, 4, 0.64);
+}
+
+.difference-row.header > * {
+  min-height: 50px;
+  color: var(--gold);
+  background: rgba(217, 184, 108, 0.1);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.difference-row strong {
+  color: var(--ink);
+}
+
+.difference-row span {
+  color: var(--dim);
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.video-card {
+  overflow: hidden;
+  min-height: 248px;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.video-card:hover {
+  border-color: rgba(217, 184, 108, 0.55);
+  background: rgba(217, 184, 108, 0.1);
+  transform: translateY(-2px);
+}
+
+.video-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+  filter: saturate(0.88) contrast(1.04);
+}
+
+.video-card span,
+.video-card small {
+  margin-inline: 16px;
+}
+
+.video-card span {
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-weight: 950;
 }
 
 .culture-panel {
@@ -1130,6 +1215,7 @@ main {
   .next-ritual,
   .compass-layout,
   .social-layout,
+  .field-manual,
   .football-layout {
     grid-template-columns: 1fr;
   }
@@ -1152,7 +1238,8 @@ main {
   }
 
   .checklist-grid,
-  .resource-grid {
+  .resource-grid,
+  .video-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1288,15 +1375,25 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .matrix-row.header {
+  .difference-row {
+    grid-template-columns: 1fr;
+  }
+
+  .matrix-row.header,
+  .difference-row.header {
     display: none;
   }
 
-  .matrix-row {
+  .matrix-row,
+  .difference-row {
     margin-bottom: 8px;
     border: 1px solid rgba(217, 184, 108, 0.14);
     border-radius: var(--radius);
     overflow: hidden;
+  }
+
+  .video-grid {
+    grid-template-columns: 1fr;
   }
 
   .ladder article {
