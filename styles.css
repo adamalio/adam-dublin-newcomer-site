@@ -1428,3 +1428,98 @@ main {
   .s3 { right: 12%; }
   .s5 { left: 10%; }
 }
+
+/* Personal relocation route */
+.relocation-section {
+  position: relative;
+}
+
+.relocation-status,
+.relocation-steps {
+  display: grid;
+  gap: 12px;
+  margin-top: 38px;
+}
+
+.relocation-status {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.relocation-steps {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.status-card,
+.relocation-steps article,
+.relocation-note {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(145deg, rgba(248, 241, 220, 0.09), rgba(248, 241, 220, 0.035)), var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.status-card,
+.relocation-steps article {
+  display: flex;
+  min-height: 190px;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.status-card span,
+.relocation-steps b {
+  width: max-content;
+  margin-bottom: 20px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.status-card strong,
+.relocation-steps strong {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.status-card.caution {
+  border-color: rgba(27, 198, 160, 0.55);
+  background: linear-gradient(145deg, rgba(27, 198, 160, 0.16), rgba(248, 241, 220, 0.035)), var(--panel);
+}
+
+.relocation-steps article {
+  min-height: 220px;
+}
+
+.relocation-note {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  margin-top: 12px;
+  padding: 20px 22px;
+  color: var(--dim);
+}
+
+.relocation-note strong {
+  color: var(--gold);
+}
+
+@media (max-width: 860px) {
+  .relocation-status,
+  .relocation-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .relocation-status,
+  .relocation-steps,
+  .relocation-note {
+    grid-template-columns: 1fr;
+  }
+
+  .relocation-note {
+    gap: 8px;
+  }
+}

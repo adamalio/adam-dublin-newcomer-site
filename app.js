@@ -1,5 +1,36 @@
 const checklistItems = [
   {
+    id: "relocation-letter",
+    category: "relocation",
+    title: "Save the signed relocation letter",
+    detail: "Cash-out was selected and the letter was acknowledged; retain it as the source of truth.",
+    completed: true
+  },
+  {
+    id: "globalconnect-access",
+    category: "relocation",
+    title: "Confirm globalConnect access is secure",
+    detail: "Log in successfully, change any temporary password, and do not store credentials here."
+  },
+  {
+    id: "service-route-decision",
+    category: "relocation",
+    title: "Keep cash-out or ask to switch services",
+    detail: "Only revisit managed services before the start date; Graebel guidance says to allow 4–6 weeks."
+  },
+  {
+    id: "google-banking",
+    category: "relocation",
+    title: "Complete Google banking onboarding after start",
+    detail: "Finish the Google onboarding requirement before expecting payroll-linked relocation processing."
+  },
+  {
+    id: "arrival-payment",
+    category: "relocation",
+    title: "Submit Dublin arrival date after physical relocation",
+    detail: "Use globalConnect’s Relocation Payment tile; retain confirmation and watch the next 1–2 pay cycles."
+  },
+  {
     id: "temporary-base",
     category: "housing",
     title: "Book a 3-4 week landing base",
@@ -68,6 +99,12 @@ function saveState() {
   localStorage.setItem(storageKey, JSON.stringify(checkedState));
 }
 
+function isChecked(item) {
+  return Object.prototype.hasOwnProperty.call(checkedState, item.id)
+    ? Boolean(checkedState[item.id])
+    : Boolean(item.completed);
+}
+
 function renderChecklist() {
   const visibleItems = checklistItems.filter((item) => {
     return activeFilter === "all" || item.category === activeFilter;
@@ -77,12 +114,13 @@ function renderChecklist() {
 
   visibleItems.forEach((item) => {
     const label = document.createElement("label");
-    label.className = `check-item${checkedState[item.id] ? " is-done" : ""}`;
+    const complete = isChecked(item);
+    label.className = `check-item${complete ? " is-done" : ""}`;
     label.dataset.category = item.category;
 
     const input = document.createElement("input");
     input.type = "checkbox";
-    input.checked = Boolean(checkedState[item.id]);
+    input.checked = complete;
     input.setAttribute("aria-label", item.title);
 
     const copy = document.createElement("span");
@@ -107,6 +145,7 @@ function renderChecklist() {
 function detailText(item) {
   const categoryNames = {
     admin: "Admin",
+    relocation: "Relocation",
     football: "Football",
     housing: "Housing",
     social: "Social"
