@@ -21,8 +21,26 @@ const checklistItems = [
   {
     id: "google-banking",
     category: "relocation",
-    title: "Complete Google banking onboarding after start",
-    detail: "Finish the Google onboarding requirement before expecting payroll-linked relocation processing."
+    title: "Open the local bank account before Day 1",
+    detail: "Google Onboarding says to have an eligible account in the country of hire ready before the first day so pay is not delayed."
+  },
+  {
+    id: "government-id",
+    category: "relocation",
+    title: "Confirm accepted Ireland ID and pack it",
+    detail: "Bring at least one government-issued ID for the credential appointment; check the internal Ireland-specific document rules first."
+  },
+  {
+    id: "credential-appointment",
+    category: "relocation",
+    title: "Complete identity and schedule credentials",
+    detail: "Use the internal onboarding steps to verify identity and arrange permanent-corporate-account access."
+  },
+  {
+    id: "corporate-headshot",
+    category: "relocation",
+    title: "Prepare a clear badge headshot",
+    detail: "Upload it after corporate access is live for the security badge and corporate profile."
   },
   {
     id: "arrival-payment",
