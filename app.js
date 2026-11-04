@@ -102,19 +102,31 @@ const storageKey = "adam-dublin-checklist";
 const list = document.querySelector("#checklistItems");
 const filterButtons = document.querySelectorAll(".filter-button");
 
+const storageNotice = document.createElement("p");
+storageNotice.setAttribute("role", "status");
+storageNotice.textContent = "Your checklist changes are available in this tab, but could not be saved. Browser storage may be full or disabled.";
+storageNotice.hidden = true;
+list.before(storageNotice);
+
 let activeFilter = "all";
 let checkedState = readState();
 
 function readState() {
   try {
-    return JSON.parse(localStorage.getItem(storageKey)) || {};
+    const saved = JSON.parse(localStorage.getItem(storageKey));
+    return saved && typeof saved === "object" && !Array.isArray(saved) ? saved : {};
   } catch {
     return {};
   }
 }
 
 function saveState() {
-  localStorage.setItem(storageKey, JSON.stringify(checkedState));
+  try {
+    localStorage.setItem(storageKey, JSON.stringify(checkedState));
+    storageNotice.hidden = true;
+  } catch {
+    storageNotice.hidden = false;
+  }
 }
 
 function isChecked(item) {
@@ -173,9 +185,13 @@ function detailText(item) {
 }
 
 filterButtons.forEach((button) => {
+  button.setAttribute("aria-pressed", String(button.dataset.filter === activeFilter));
   button.addEventListener("click", () => {
     activeFilter = button.dataset.filter;
-    filterButtons.forEach((item) => item.classList.toggle("active", item === button));
+    filterButtons.forEach((item) => {
+      item.classList.toggle("active", item === button);
+      item.setAttribute("aria-pressed", String(item === button));
+    });
     renderChecklist();
   });
 });
